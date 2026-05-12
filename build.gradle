@@ -1,0 +1,23 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Updated to an 8.x version to match your Gradle 8 environment
+        classpath 'com.android.tools.build:gradle:8.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Updated syntax to be compatible with Gradle 8+
+tasks.register('clean', Delete) {
+    delete rootProject.layout.buildDirectory
+}
